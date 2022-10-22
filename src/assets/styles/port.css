@@ -1,0 +1,27 @@
+.body-port {
+    /*background-color: #27272a;*/
+    background-image: url(assets/images/bg-texture.png);
+}
+
+
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+.content-div-sqlt {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.content-div:hover{
+    background-image: linear-gradient(
+        to right,
+        rgba(24, 24, 27, 1),
+        rgba(24, 24, 27, 1)
+    )!important;
+}
+

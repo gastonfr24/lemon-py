@@ -1,0 +1,9 @@
+
+li{
+    @apply px-4;
+    @apply cursor-pointer;
+}
+
+.bg-image {
+    background-image: url(assets/images/bg-texture.png);
+}
