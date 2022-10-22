@@ -28,12 +28,16 @@ if not DEBUG:
     ALLOWED_HOSTS = [
         "lemon-py.com",
         ".lemon-py.com",
-        "www.lemon-py.com"
+        "www.lemon-py.com",
+        "https://lemon-py.onrender.com",
+        "lemon-py.onrender.com",
+
     ]
 
 CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:3000',
-    'http://127.0.0.1:8000'
+    'http://127.0.0.1:8000',
+    
 
 ]
 
@@ -49,12 +53,16 @@ if not DEBUG:
         'https://lemon-py.com',
         #'https://admin.lemon-py.com',
         #'https://blog.lemon-py.com',
+        "https://lemon-py.onrender.com",
+        "lemon-py.onrender.com",
     ]
 
     CSRF_TRUSTED_ORIGINS = [
         'https://lemon-py.com',
         #'https://admin.lemon-py.com',
         #'https://blog.lemon-py.com',
+        "lemon-py.onrender.com",
+        "https://lemon-py.onrender.com",
     ]
 
 
