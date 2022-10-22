@@ -17,3 +17,5 @@ argon2-cffi-bindings==21.2.0
 
 gunicorn==20.1.0
 whitenoise==6.2.0
+
+django-froala-editor==4.0.15
