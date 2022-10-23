@@ -263,6 +263,7 @@ if not DEBUG:
     
     # django-ckeditor will not work with S3 through django-storages without this line in settings.py
     AWS_QUERYSTRING_AUTH = False
+    FROALA_STORAGE_BACKEND = MEDIA_ROOT
 
     # aws settings
     AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
@@ -278,7 +279,8 @@ if not DEBUG:
 
     STATIC_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATICFILES_STORAGE = 'core.storage_backends.StaticStorage'
 
     # s3 public media settings
 
