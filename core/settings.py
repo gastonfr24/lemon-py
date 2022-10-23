@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'RENDER' not in os.environ
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -252,7 +252,7 @@ ACTIVE_CAMPAIGN_KEY=os.environ.get('ACTIVE_CAMPAIGN_KEY')
 
 # AWS y Mail
 if not DEBUG:
-    DEFAULT_FROM_EMAIL="LemonPy <email@lemon-py.com>"
+    DEFAULT_FROM_EMAIL="LemonPy <mail@lemon-py.com>"
     #EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
     #EMAIL_HOST = env('EMAIL_HOST')
     #EMAIL_HOST_USER = env('EMAIL_HOST_USER')
