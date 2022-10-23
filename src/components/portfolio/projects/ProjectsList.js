@@ -25,7 +25,7 @@ function ProjectsList({
               
               {/* Gird Item */}
               {projects_list.map((item, index) => (
-      <div>
+      <div key={index}>
       <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div className="flex-shrink-0">
         <Link
@@ -34,7 +34,7 @@ function ProjectsList({
               >
           <img
             className="h-48 w-full object-cover scale-110 transition-all duration-400 hover:scale-100"
-            src={inversion}
+            src={item.thumbnail}
             alt=""
           />
           </Link>
