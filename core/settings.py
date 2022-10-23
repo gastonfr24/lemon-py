@@ -34,12 +34,7 @@ if not DEBUG:
 
     ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:8000',
-    
 
-]
 
 
 
@@ -98,11 +93,35 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:3000',
+    'http://127.0.0.1:8000',
+    'https://lemon-py.com',
+    'lemon-py.com',
+
+    'https://lemon-py.s3.amazonaws.com',
+    'https://lempy.s3.amazonaws.com',
+    'https://lempy.s3.sa-east-1.amazonaws.com',
+
+    "lemon-py.onrender.com",
+    "https://lemon-py.onrender.com"
+    
+
+]
 
 # CSRF_COOKIE_DOMAIN = "lemon-py.com"
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
-    'http://127.0.0.1:8000'
+    'http://127.0.0.1:8000',
+    'https://lemon-py.com',
+    'lemon-py.com',
+
+    'https://lemon-py.s3.amazonaws.com',
+    'https://lempy.s3.amazonaws.com',
+    'https://lempy.s3.sa-east-1.amazonaws.com',
+
+    "lemon-py.onrender.com",
+    "https://lemon-py.onrender.com"
 ]
 
 
