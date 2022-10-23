@@ -15,13 +15,13 @@ function About() {
             <div className="max-w-[1000px] w-full px-4 grid sm:grid-cols-2 gap-8 ">
             <div>
                 <p className="sm:text-right text-4xl font-bold dark:text-white text-zinc-700">
-                    Hola, Soy Gaston Fraco, Data Scientist y Desarrolador web
+                    Hola, Soy Gaston Franco, Data Scientist y Desarrolador web
                 </p>
             </div>
 <div>
 <p className="dark:text-white text-zinc-700">y por si te lo preguntabas, si, Franco es mi apellido :D, tengo 21 años, soy de Mendoza,Argentina y desde la secundaria me ha interesado la programación y
   las matemáticas por lo cual tengo amplios conocimentos en álgebra y estadistica descriptiva. Mas abajo vas a encontrar proyectos que he realizado tanto por mi parte
-  como algunos otros que he realizado con amigos programadores que he conocido durante el camino. Muchas gracias por visitar mi portafolio! 
+  como algunos otros que he realizado con amigos programadores que he conocido durante el camino. ¡Muchas gracias por visitar mi portafolio! 
 </p>
 </div>
             </div>
