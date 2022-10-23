@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'RENDER' not in os.environ
 
 
 ALLOWED_HOSTS = [
@@ -41,33 +41,6 @@ CORS_ORIGIN_WHITELIST = [
 
 ]
 
-# CSRF_COOKIE_DOMAIN = "solopython.com"
-CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:8000'
-]
-
-
-if not DEBUG:
-    CORS_ORIGIN_WHITELIST = [
-        'https://lemon-py.com',
-        'https://lemon-py.s3.amazonaws.com',
-        'lemon-py.com',
-        #'https://admin.lemon-py.com',
-        #'https://blog.lemon-py.com',
-        "https://lemon-py.onrender.com",
-        "lemon-py.onrender.com",
-    ]
-
-    CSRF_TRUSTED_ORIGINS = [
-        'https://lemon-py.com',
-        'lemon-py.com',
-        'https://lemon-py.s3.amazonaws.com',
-        #'https://admin.lemon-py.com',
-        #'https://blog.lemon-py.com',
-        "lemon-py.onrender.com",
-        "https://lemon-py.onrender.com",
-    ]
 
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -124,6 +97,38 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+
+
+# CSRF_COOKIE_DOMAIN = "lemon-py.com"
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:3000',
+    'http://127.0.0.1:8000'
+]
+
+
+if not DEBUG:
+    CORS_ORIGIN_WHITELIST = [
+        'https://lemon-py.com',
+        'https://lemon-py.s3.amazonaws.com',
+        "https://lemon-py.onrender.com",
+        "lemon-py.onrender.com",
+        'lemon-py.com',
+        #'https://admin.lemon-py.com',
+        #'https://blog.lemon-py.com',
+
+    ]
+
+    CSRF_TRUSTED_ORIGINS = [
+        'https://lemon-py.com',
+        'lemon-py.com',
+        'https://lemon-py.s3.amazonaws.com',
+        "lemon-py.onrender.com",
+        "https://lemon-py.onrender.com",
+        #'https://admin.lemon-py.com',
+        #'https://blog.lemon-py.com',
+    ]
+
+
 
 TEMPLATES = [
     {
