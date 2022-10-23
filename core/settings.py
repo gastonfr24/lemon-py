@@ -110,6 +110,7 @@ if not DEBUG:
     CORS_ORIGIN_WHITELIST = [
         'https://lemon-py.com',
         'https://lemon-py.s3.amazonaws.com',
+        'https://lempy.s3.amazonaws.com',
         "https://lemon-py.onrender.com",
         "lemon-py.onrender.com",
         'lemon-py.com',
@@ -122,6 +123,7 @@ if not DEBUG:
         'https://lemon-py.com',
         'lemon-py.com',
         'https://lemon-py.s3.amazonaws.com',
+        'https://lempy.s3.amazonaws.com',
         "lemon-py.onrender.com",
         "https://lemon-py.onrender.com",
         #'https://admin.lemon-py.com',
