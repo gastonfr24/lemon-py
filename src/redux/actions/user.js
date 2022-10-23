@@ -51,7 +51,7 @@ export const create_user = () => async dispatch  =>{
         }else{
             dispatch({
                 type: CREATE_USER_FAIL,
-            })
+            });
             await dispatch({
                 type: SET_LOADING,
                 payload: false
