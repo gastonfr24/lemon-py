@@ -118,8 +118,9 @@ if not DEBUG:
 
         "lemon-py.onrender.com",
         "https://lemon-py.onrender.com",
-        'https://lemon-py.com',
-        'lemon-py.com',
+
+        "https://lemon-py.com",
+        "lemon-py.com",
         #'https://admin.lemon-py.com',
         #'https://blog.lemon-py.com',
     ]
@@ -131,8 +132,9 @@ if not DEBUG:
 
         "lemon-py.onrender.com",
         "https://lemon-py.onrender.com",
-        'https://lemon-py.com',
-        'lemon-py.com',
+        
+        "https://lemon-py.com",
+        "lemon-py.com",
         #'https://admin.lemon-py.com',
         #'https://blog.lemon-py.com',
     ]
@@ -262,7 +264,7 @@ if not DEBUG:
     
     # django-ckeditor will not work with S3 through django-storages without this line in settings.py
     AWS_QUERYSTRING_AUTH = False
-    #FROALA_STORAGE_BACKEND = MEDIA_ROOT
+    FROALA_STORAGE_BACKEND = 
 
     # aws settings
     AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
@@ -289,3 +291,5 @@ if not DEBUG:
 
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'),)
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+    FROALA_STORAGE_BACKEND = MEDIA_URL
