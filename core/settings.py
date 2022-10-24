@@ -292,4 +292,27 @@ if not DEBUG:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'),)
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-    #FROALA_STORAGE_BACKEND = MEDIA_URL
+
+    # Froala s3
+    from froala_editor import S3
+    config = {
+  # The name of your bucket.
+  'bucket': env('AWS_STORAGE_BUCKET_NAME'),
+
+  # S3 region. If you are using the default us-east-1, it this can be ignored.
+  'region': 'sa-east-1',
+
+  # The folder where to upload the images.
+  'keyStart': 'uploads',
+
+  # File access.
+  'acl': 'public-read',
+
+  # AWS keys.
+  'accessKey': env('AWS_ACCESS_KEY_ID'),
+  'secretKey': env('AWS_SECRET_ACCESS_KEY')
+    }
+
+    s3Hash = S3.getHash(config)
+
+    FROALA_UPLOAD_PATH= s3Hash
