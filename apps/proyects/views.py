@@ -13,6 +13,10 @@ from .models import Projects
 from .serializers import ProjectSerializer, SmallProjectSerializer
 from .pagination import SmallSetPagination, MediumSetPagination, LargeSetPagination
 
+
+from django.conf import settings
+
+
 # Dataset
 import pandas as pd
 import numpy as np
@@ -54,7 +58,7 @@ class DataFrameView(APIView):
 class DataFrameAnalisisView(APIView):
     def get(self, request, project_slug, format=None):
         project = get_object_or_404(Projects, slug=project_slug)
-        df = pd.read_csv(project.get_dataset()[1:])
+        df = pd.read_csv('{settings.MEDIA_URL}'+project.get_dataset()[1:])
 
         df_describe = df.describe()
         leng = df_describe.shape

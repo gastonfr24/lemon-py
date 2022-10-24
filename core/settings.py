@@ -292,4 +292,4 @@ if not DEBUG:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'),)
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-    FROALA_STORAGE_BACKEND = MEDIA_URL
+    #FROALA_STORAGE_BACKEND = MEDIA_URL
