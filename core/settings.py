@@ -219,7 +219,7 @@ STATICFILES_DIRS = [
 ]
 
 # Froala settings
-FROALA_UPLOAD_PATH = MEDIA_ROOT
+FROALA_UPLOAD_PATH = '/media/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
