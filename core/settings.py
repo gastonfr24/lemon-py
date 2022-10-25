@@ -65,20 +65,20 @@ PROJECT_APPS = [
 THIRD_PARTY_APPS = [
     'corsheaders',
     'rest_framework',
-    'ckeditor',
-    'ckeditor_uploader',
+    #'ckeditor',
+    #'ckeditor_uploader',
     'froala_editor'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-        'autoParagraph': False
-    }
-}
-CKEDITOR_UPLOAD_PATH = "/media/"
+#CKEDITOR_CONFIGS = {
+#    'default': {
+#        'toolbar': 'full',
+#        'autoParagraph': False
+#    }
+#}
+#CKEDITOR_UPLOAD_PATH = "/media/"
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -293,4 +293,3 @@ if not DEBUG:
 
     # Froala settings
     FROALA_UPLOAD_PATH = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
-    #FROALA_STORAGE_BACKEND = MEDIA_URL
