@@ -29,9 +29,10 @@ if not DEBUG:
         "lemon-py.com",
         ".lemon-py.com",
         #"www.lemon-py.com",
-        'https://lemon-py.com"'
+        "https://lemon-py.com",
         "https://lemon-py.onrender.com",
         "lemon-py.onrender.com",
+        
 
     ]
 
