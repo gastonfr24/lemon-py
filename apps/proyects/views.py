@@ -47,7 +47,7 @@ class ProjectDetailView(APIView):
 class DataFrameView(APIView):
     def get(self, request, project_slug, format=None):
         project = get_object_or_404(Projects, slug=project_slug)
-        df = pd.read_csv(project.get_dataset()[1:], header=None)
+        df = pd.read_csv(project.get_dataset(), header=None)
         df_example = df.head(5)
         df_head = df_example.iloc[0:1,:].values
         df_c = df_example.iloc[1:,:].values
