@@ -18,8 +18,8 @@ import { Link } from 'react-router-dom'
 import Logo from "assets/images/lemonpy.png"
 
 const navigation = [
-  { name: 'Blog', href: '/Blog', current: true },
-/*   { name: 'Contact', href: '/contact', current: false }, */
+/*   { name: 'Blog', href: '/Blog', current: true }, */
+  { name: 'Contact', href: '/contact', current: false },
 /*   { name: 'ML Projects', href: '/portfolio', current: false }, */
   { name: 'About', href: '/portfolio', current: false },
 ]
@@ -352,7 +352,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                 
 
                 <div className="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
-                <div className=" lg:flex lg:items-center lg:justify-end mr-6 xl:col-span-4">
+                <div className=" lg:flex md:flex hidden lg:items-center lg:justify-end mr-6 xl:col-span-4">
 
                   {account ? authLinks:guestLinks}
                 </div>
