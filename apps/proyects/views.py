@@ -48,7 +48,9 @@ class DataFrameView(APIView):
     def get(self, request, project_slug, format=None):
         project = get_object_or_404(Projects, slug=project_slug)
         df = pd.read_csv(project.get_dataset(), header=None)
-        df_example = df.head(5)
+        # Eliminación de datos nulos
+        df_new = df.dropna()
+        df_example = df_new.head(5)
         df_head = df_example.iloc[0:1,:].values
         df_c = df_example.iloc[1:,:].values
         leng = df.shape
