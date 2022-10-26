@@ -117,7 +117,7 @@ function Contact(){
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
                   <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
-                  <span className="ml-3">gastonfr24@gmail.com</span>
+                  <span className="ml-3">mail@lemonpy.awsapps.com</span>
                 </dd>
               </div>
             </dl>

@@ -37,7 +37,7 @@ class ContactCreateView(APIView):
                 # quien manda
                 'lavoucra@gmail.com',
                 # a quienes les llega   
-                ['gastonfr24@gmail.com'],
+                ['mail@lemonpy.awsapps.com'],
                 fail_silently=False
             )
 

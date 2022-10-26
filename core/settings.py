@@ -28,7 +28,7 @@ if not DEBUG:
     ALLOWED_HOSTS = [
         "lemon-py.com",
         ".lemon-py.com",
-        #"www.lemon-py.com",
+        "www.lemon-py.com",
         "https://lemon-py.com",
         "https://lemon-py.onrender.com",
         "lemon-py.onrender.com",
@@ -118,11 +118,11 @@ if not DEBUG:
         'https://lempy.s3.amazonaws.com',
         'https://lempy.s3.sa-east-1.amazonaws.com',
 
-        "lemon-py.onrender.com",
-        "https://lemon-py.onrender.com",
-
-        "https://lemon-py.com",
+        #"lemon-py.onrender.com",
+        #"https://lemon-py.onrender.com",
         "lemon-py.com",
+        "https://lemon-py.com",
+
 ]
 
     CORS_ORIGIN_WHITELIST = [
@@ -130,8 +130,8 @@ if not DEBUG:
         'https://lempy.s3.amazonaws.com',
         'https://lempy.s3.sa-east-1.amazonaws.com',
 
-        "lemon-py.onrender.com",
-        "https://lemon-py.onrender.com",
+        #"lemon-py.onrender.com",
+        #"https://lemon-py.onrender.com",
 
         "https://lemon-py.com",
         "lemon-py.com",
