@@ -112,6 +112,19 @@ CSRF_TRUSTED_ORIGINS = [
 
 
 if not DEBUG:
+
+    CORS_ALLOWED_ORIGINS = [
+        'https://lemon-py.s3.amazonaws.com',
+        'https://lempy.s3.amazonaws.com',
+        'https://lempy.s3.sa-east-1.amazonaws.com',
+
+        "lemon-py.onrender.com",
+        "https://lemon-py.onrender.com",
+
+        "https://lemon-py.com",
+        "lemon-py.com",
+]
+
     CORS_ORIGIN_WHITELIST = [
         'https://lemon-py.s3.amazonaws.com',
         'https://lempy.s3.amazonaws.com',
@@ -122,6 +135,7 @@ if not DEBUG:
 
         "https://lemon-py.com",
         "lemon-py.com",
+
         #'https://admin.lemon-py.com',
         #'https://blog.lemon-py.com',
     ]
