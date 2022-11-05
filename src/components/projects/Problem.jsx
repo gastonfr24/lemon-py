@@ -18,7 +18,8 @@ function Problem({problem, url}) {
                  Problema a resolver
                 </h2>
                 
-                <a href={url}><button className='bg-zinc-800 py-1 px-2 font-gilroy-semibold mb-10 rounded-md inline-flex items-center hover:bg-indigo-800 duration-300'>
+                <a href={url}><button className='bg-zinc-300 dark:bg-zinc-800 py-1 px-2 font-gilroy-semibold mb-10 rounded-md inline-flex items-center
+                 hover:bg-indigo-500 dark:hover:bg-indigo-800 duration-300'>
                 <FaGithub className='mr-1 text-xl'/>
                   Ir a Github</button></a>
 

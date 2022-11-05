@@ -82,11 +82,11 @@ function Project({get_project, project}) {
 
   {/* Análisis */}
   </Tabs.Item>
-  <Tabs.Item title="Análisis Exploratorio">
+  <Tabs.Item title="Análisis Descriptivo">
 <Exploratorial analisis={project.content} slug={slug}/>
 
   </Tabs.Item>
-  <Tabs.Item title="Análisis Descriptivo">
+  <Tabs.Item title="Análisis Exploratorio">
     <Descriptive content={project.solution}/>
   </Tabs.Item>
 
