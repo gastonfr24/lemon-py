@@ -83,7 +83,7 @@ function Dataset({about_df, slug, get_df, df_header, df_corpus, len, dataset_url
            {
                 df_header ? 
            <a href={dataset_url} download="dataset" target='_blank'>
-                <button className="font-gilroy-bold mb-10 md:ml-8 py-3 px-2 rounded-xl bg-green-600 inline-flex items-center hover:bg-green-700">
+                <button className="text-white font-gilroy-bold mb-10 md:ml-8 py-3 px-2 rounded-xl bg-green-600 inline-flex items-center hover:bg-green-700">
                 <HiOutlineDocumentDownload className="text-2xl mr-1"/>
                 dataset.csv</button>
                 </a>

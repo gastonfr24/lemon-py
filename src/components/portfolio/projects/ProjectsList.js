@@ -61,7 +61,7 @@ function ProjectsList({
               </button>
             </p>
             <Link to={`/project/${item.slug}`} className="block mt-2">
-              <p className="text-xl font-gilroy-semibold text-zinc-900 dark:text-zinc-200">
+              <p className="text-lg font-gilroy-bold text-zinc-900 dark:text-zinc-200">
                 {item.title}
               </p>
               <p className="mt-3 text-base text-gray-500 font-gilroy-medium">{truncate(item.description)}</p>
