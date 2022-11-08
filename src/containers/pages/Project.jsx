@@ -28,6 +28,7 @@ import Solution from "components/projects/Solution";
 import Exploratorial from "components/projects/Exploratorial";
 import Descriptive from "components/projects/Descriptive";
 import Model from "components/projects/Model";
+import BigLoader from "components/loaders/BigLoader";
 
 
 
@@ -67,28 +68,54 @@ function Project({get_project, project}) {
   style="default"
 >
   {/* Problema a Resolver */}
-  <Tabs.Item
+
+  {project.problem ?
+  
+    <Tabs.Item
     active={true}
     title="Problema a resolver"
   >
   <Problem problem={project.problem} url={project.repository}/>
+  </Tabs.Item>
+
+  :''}
+
+
 
 
   {/* Dataset */}
-  </Tabs.Item>
+
+{project.dataset_info ? 
+
   <Tabs.Item title="Dataset">
 <Dataset about_df={project.dataset_info} slug={slug} dataset_url={project.dataset}/>
-
-
-  {/* Análisis */}
   </Tabs.Item>
+
+:''}
+
+
+
+
+
+    {/* Análisis */}
+{project.content ? 
+
   <Tabs.Item title="Análisis Descriptivo">
 <Exploratorial analisis={project.content} slug={slug}/>
-
   </Tabs.Item>
+
+:"" }
+{/* Análisis Exploratorio */}
+{
+  project.solution ? 
+  
   <Tabs.Item title="Análisis Exploratorio">
     <Descriptive content={project.solution}/>
   </Tabs.Item>
+  
+:''
+}
+
 
   {/* Modelado */}
   <Tabs.Item title="Selección de Modelo">
@@ -105,7 +132,7 @@ function Project({get_project, project}) {
           </div>
 
 </>:
-<>Loading...</>
+<><BigLoader/></>
 }
     </FullWidthLayout>
   )

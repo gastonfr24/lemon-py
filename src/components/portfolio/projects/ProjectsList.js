@@ -49,9 +49,9 @@ function ProjectsList({
                   item.category.name === "Machine Learning"
                       ? " bg-green-200 text-green-700 hover:bg-green-300"
                       : item.category.name === "Deep Learning"
-                      ? "bg-rose-100 text-rose-700"
+                      ? "bg-blue-200 text-blue-700 hover:bg-blue-800"
                       : item.category.name === "Inteligencia Artificial"
-                      ? "bg-blue-100 text-blue-700 hover:bg-blue-800"
+                      ? "bg-rose-100 text-rose-700"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               } 
               inline-flex items-center px-3 py-0.5 rounded-full text-sm font-gilroy-bold`}

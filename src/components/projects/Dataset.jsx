@@ -36,12 +36,15 @@ function Dataset({about_df, slug, get_df, df_header, df_corpus, len, dataset_url
 
 
     <div className="px-4 pb-16 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-20 lg:pt-2">
-
-    <div className="px-4 pb-2 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-8 lg:pt-2">
+    {
+              dataset_url ? <>
+              
+              <div className="px-4 pb-2 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-8 lg:pt-2">
     <h2 className="font-sans text-3xl font-bold tracking-tight text-green-500 sm:text-4xl sm:leading-none max-w-lg mb-6">
                  Acerca del Dataset
                 </h2>
           <div className="flex flex-col items-center justify-between w-full ">
+ 
                 <p className="dark:text-white md:text-lg dark:bg-zinc-900 font-gilroy-medium"> 
                 Vamos a resolver el problema usando un dataset de Kaggle, este dataset 
                 cuenta con {len?<>{len[1]}</>:<>varias</>} características en total, cada una con {len?<>{len[0]}</>:<>varias</>} puntos de datos {len?<>({len[0]} filas y {len[1]} columnas)</>:<></>}
@@ -88,7 +91,25 @@ function Dataset({about_df, slug, get_df, df_header, df_corpus, len, dataset_url
                 dataset.csv</button>
                 </a>
                 :<></>}
-           <div className="flex flex-col items-center justify-between w-full mb-5 ">
+
+              
+              
+              
+              </>:<>
+              
+              <div className="px-4 pb-2 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-8 lg:pt-2">
+    <h2 className="font-sans text-3xl font-bold tracking-tight text-green-500 sm:text-4xl sm:leading-none max-w-lg mb-6">
+                 Acerca del Dataset
+                </h2>
+              </div>
+              </>
+            }
+   
+
+
+
+                
+           <div className="flex flex-col justify-between w-full mb-5 ">
                 <p className="dark:text-white text-m md:text-lg dark:bg-zinc-900 font-gilroy-medium"> 
                  <FroalaEditorView model={about_df} />
                 </p>

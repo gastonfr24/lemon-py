@@ -31,15 +31,15 @@ class Projects(models.Model):
     thumbnail = models.ImageField(upload_to = blog_directory_path)
     #video = models.FileField(upload_to= blog_directory_path, blank=True, null=True)
     #excerpt = models.CharField(max_length=100)
-    dataset = models.FileField(upload_to = blog_directory_path)
+    dataset = models.FileField(upload_to = blog_directory_path,null= True, blank= True, default= False)
 
 
 
-    problem = FroalaField()   
-    solution= FroalaField()
-    dataset_info = FroalaField()
-    content = FroalaField()
-    modelado = FroalaField()
+    problem = FroalaField(null= True, blank= True)   
+    solution= FroalaField(null= True, blank= True)
+    dataset_info = FroalaField(null= True, blank= True)
+    content = FroalaField(null= True, blank= True)
+    modelado = FroalaField(null= True, blank= True)
 
     repository= models.URLField(max_length=300)
 
