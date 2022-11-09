@@ -98,10 +98,10 @@ function Project({get_project, project}) {
 
 
     {/* Análisis */}
-{project.content ? 
+{project.dataset ? 
 
   <Tabs.Item title="Análisis Descriptivo">
-<Exploratorial analisis={project.dataset} slug={slug}/>
+<Exploratorial analisis={project.content} slug={slug}/>
   </Tabs.Item>
 
 :"" }
