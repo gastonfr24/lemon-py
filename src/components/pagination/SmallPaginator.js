@@ -23,7 +23,8 @@ function SmallSetPagination({get_blog_list_page, blog_list, count}){
         }
     };
 
-    const next_number = () => {window.scrollTo(0, 0);
+    const next_number = () => {
+        //window.scrollTo(0, 0);
       if (currentPage !== Math.ceil(blog_list.length/3)) {
           setCurrentPage(currentPage+1);
           setActive(currentPage+1);

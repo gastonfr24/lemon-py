@@ -43,6 +43,7 @@ class Projects(models.Model):
 
     repository= models.URLField(max_length=300)
 
+    model = models.CharField(max_length=100, null=True, blank=True)
     #author = 
 
     category =  models.ForeignKey(Category, on_delete= models.PROTECT)
@@ -50,6 +51,8 @@ class Projects(models.Model):
     published = models.DateTimeField(default= timezone.now)
 
     status = models.CharField(max_length=10, choices=options, default='draft')
+
+
 
    # ml_project= models.OneToOneField()
 

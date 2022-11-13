@@ -20,6 +20,7 @@ from django.conf import settings
 # Dataset
 import pandas as pd
 import numpy as np
+from joblib import load
 
 class ProjectListView(APIView):
     def get(self, request, format=None):
@@ -57,6 +58,7 @@ class DataFrameView(APIView):
 
         return Response({'df_head': df_head, 'df_corpus': df_c, 'len':leng}, status= status.HTTP_200_OK)
 
+
 class DataFrameAnalisisView(APIView):
     def get(self, request, project_slug, format=None):
         project = get_object_or_404(Projects, slug=project_slug)
@@ -88,3 +90,31 @@ class SearchProjectView(APIView):
         # results = paginator.paginate_queryset(matches, request)
         serializer = SmallProjectSerializer(matches, many=True)
         return Response({'filtered_projects':serializer.data},status=status.HTTP_200_OK)
+
+
+class HousingModelView(APIView):
+     def post( self, request, *args, **kwargs):
+        data= self.request.data
+
+        X_data = []
+
+        if data['State'] == 'Godoy Cruz':
+            X_data.append(0)
+            minus= 43253.54
+        if data['State'] == 'Mendoza':
+            X_data.append(1)
+
+        X_data.append(data['house'])
+        X_data.append(data['house_2'])
+        X_data.append(data['Bathrooms'])
+        X_data.append(data['Bethrooms'])
+
+
+        X_data = np.array(X_data, dtype=np.float)
+
+
+        X_data=X_data.reshape(1, -1)
+        regression_model = load(settings.MEDIA_URL + 'regression.joblib')
+        prediction =regression_model.predict(X_data)
+        return Response({'prediction':prediction[0]}, status= status.HTTP_200_OK)
+

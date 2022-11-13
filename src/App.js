@@ -11,6 +11,7 @@ import Portfolio from "containers/pages/Portfolio";
 import Project from "containers/pages/Project";
 import Search from "containers/pages/Search";
 import Contact from "containers/pages/Contact";
+import Housing from "containers/models/Housing";
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
 
       {/* Contact */}
       <Route path='/contact' element={<Contact/>} /> 
+
+      {/* Models */}
+      <Route path='/mendoza-housing' element={<Housing/>} /> 
 
 
     </Routes>

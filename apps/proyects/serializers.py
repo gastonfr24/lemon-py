@@ -17,7 +17,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             'description',
             'slug',
             'thumbnail',
-
+            'model',
             'problem',
             'solution',
             'dataset_info',

@@ -29,6 +29,7 @@ import Exploratorial from "components/projects/Exploratorial";
 import Descriptive from "components/projects/Descriptive";
 import Model from "components/projects/Model";
 import BigLoader from "components/loaders/BigLoader";
+import LinkModel from "components/projects/LinkModel";
 
 
 
@@ -118,15 +119,24 @@ function Project({get_project, project}) {
 
 
   {/* Modelado */}
+
+
   <Tabs.Item title="Selección de Modelo">
     <Model content={project.modelado}/>
   </Tabs.Item>
-  <Tabs.Item
-    disabled={true}
+
+
+  {
+    project.model ?   <Tabs.Item
+
     title="Probar Modelo"
-  >
-    Modelo con muchas características
-  </Tabs.Item>
+    >
+  
+      
+  <LinkModel linkmodel={project.model}/>
+    </Tabs.Item>:''
+    }
+
 </Tabs.Group>
 
           </div>

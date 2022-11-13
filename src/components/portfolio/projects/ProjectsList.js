@@ -74,7 +74,13 @@ function ProjectsList({
     ))}
     </div>
     <div className='pt-3'>
-    <SmallPaginator get_blog_list_page={get_project_list_page} blog_list={projects_list} count={count}/>
+
+{
+  projects_list.length >6 ?     <SmallPaginator get_blog_list_page={get_project_list_page} blog_list={projects_list} count={count}/>
+  :<></>
+}
+
+
     </div>
     </>: <>    
     {/* Loader Squeleton */}

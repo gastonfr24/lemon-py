@@ -27,11 +27,14 @@ function Projects({
           <p className='text-4xl font-bold inline border-b-4 text-zinc-800 dark:text-gray-300 border-[#4db5ff]'>
             Work
           </p>
-          <p className='py-6 dark:text-white text-zinc-800'>//Puedes entrar a cualquier proyecto para ver mas detalles de él.</p>
+          <p className='py-6 dark:text-white text-zinc-800'>Aquí encontrarás varios pryectos de ML. Cada proyecto llevatanto  un análisis exploratorio
+           como también modelado con redes neuronales y diferentes algoritmos. El modelado en cada proyecto varía hay de regresión,
+          clasificación, clustering y predicción de series temporales</p>
         </div>
 
 {/* container for projects */}
       <ProjectsList projects_list={projects_list && projects_list} 
+
            cout={count && count} get_projects_list_page={get_project_list_page}/>
       </div>
     </div>
