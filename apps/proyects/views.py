@@ -116,5 +116,6 @@ class HousingModelView(APIView):
         regression_model = load(settings.MEDIA_URL + 'regression.joblib')
         prediction =regression_model.predict(X_data)
 
-        return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
+        #return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
+        return Response({'prediction':2022}, status= status.HTTP_200_OK)
 
