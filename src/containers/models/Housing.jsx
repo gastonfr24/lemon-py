@@ -28,7 +28,7 @@ function Housing() {
     const {house, house_2 ,Bethrooms ,Bathrooms ,State } = formData;
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-
+    console.log(State)
     const onSubmit = e => {
         setLoading(true);
         e.preventDefault();
@@ -39,6 +39,7 @@ function Housing() {
             }
           }
    
+
         const formData = new FormData()
         formData.append('house', house)
         formData.append('house_2', house_2)
@@ -46,7 +47,7 @@ function Housing() {
         formData.append('Bathrooms', Bathrooms)
         formData.append('State', State)
 
-        console.log(formData)
+        //console.log(formData)
 
         const fetchData = async () =>{
             /* funcion de post */
@@ -164,7 +165,7 @@ function Housing() {
                     >
                         <option value="" className="dark:text-zinc-700" disabled selected>Elija un lugar</option>
                         <option value="Godoy Cruz">Godoy Cruz</option>
-                        <option value="Medonza[Ciudad]">Medonza[Ciudad]</option>
+                        <option value="Mendoza[Ciudad]">Mendoza[Ciudad]</option>
                     </select>
                 </div>
 

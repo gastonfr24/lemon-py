@@ -21,6 +21,7 @@ from django.conf import settings
 import pandas as pd
 import numpy as np
 from joblib import load
+import sklearn
 
 class ProjectListView(APIView):
     def get(self, request, format=None):
@@ -99,22 +100,20 @@ class HousingModelView(APIView):
         X_data = []
 
         if data['State'] == 'Godoy Cruz':
-            X_data.append(0)
-            minus= 43253.54
-        if data['State'] == 'Mendoza':
             X_data.append(1)
-
+        else:
+            X_data.append(1)
+        print(data['State'])
         X_data.append(data['house'])
         X_data.append(data['house_2'])
         X_data.append(data['Bathrooms'])
         X_data.append(data['Bethrooms'])
 
 
-        X_data = np.array(X_data, dtype=np.float)
+        X_data = np.array([X_data], dtype=np.float)
 
-
-        X_data=X_data.reshape(1, -1)
         regression_model = load(settings.MEDIA_URL + 'regression.joblib')
         prediction =regression_model.predict(X_data)
-        return Response({'prediction':prediction[0]}, status= status.HTTP_200_OK)
+
+        return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
 

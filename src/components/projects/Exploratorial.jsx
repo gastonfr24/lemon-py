@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 // Froala 
@@ -21,7 +21,10 @@ import Table from "./Table";
 
 function Exploratorial({analisis, describe_df, slug, df}) {
 
-    
+  useEffect(() => {
+    setLoading(true)
+    describe_df(slug)
+  }, [])
 
     const [loading, setLoading] = useState(false)
 

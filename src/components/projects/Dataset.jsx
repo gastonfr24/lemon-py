@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Froala 
 import FroalaEditorView from 'react-froala-wysiwyg/FroalaEditorView'
@@ -24,6 +24,14 @@ function Dataset({about_df, slug, get_df, df_header, df_corpus, len, dataset_url
 
   const [loading, setLoading] = useState(false)
 
+
+  useEffect(() => {
+    setLoading(true)
+    get_df(slug)
+  }, [])
+  
+
+
   function get_dataframe (e){
     e.preventDefault()
     setLoading(true)
@@ -46,7 +54,7 @@ function Dataset({about_df, slug, get_df, df_header, df_corpus, len, dataset_url
           <div className="flex flex-col items-center justify-between w-full ">
  
                 <p className="dark:text-white md:text-lg dark:bg-zinc-900 font-gilroy-medium"> 
-                Vamos a resolver el problema usando un dataset de Kaggle, este dataset 
+                Este dataset 
                 cuenta con {len?<>{len[1]}</>:<>varias</>} características en total, cada una con {len?<>{len[0]}</>:<>varias</>} puntos de datos {len?<>({len[0]} filas y {len[1]} columnas)</>:<></>}
                 </p>
 
