@@ -119,8 +119,8 @@ if not DEBUG:
         'https://lempy.s3.amazonaws.com',
         'https://lempy.s3.sa-east-1.amazonaws.com',
 
-        #"lemon-py.onrender.com",
-        #"https://lemon-py.onrender.com",
+        "lemon-py.onrender.com",
+        "https://lemon-py.onrender.com",
         "lemon-py.com",
         "https://lemon-py.com",
 
@@ -131,8 +131,8 @@ if not DEBUG:
         'https://lempy.s3.amazonaws.com',
         'https://lempy.s3.sa-east-1.amazonaws.com',
 
-        #"lemon-py.onrender.com",
-        #"https://lemon-py.onrender.com",
+        "lemon-py.onrender.com",
+        "https://lemon-py.onrender.com",
 
         "https://lemon-py.com",
         "lemon-py.com",
