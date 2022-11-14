@@ -112,9 +112,9 @@ class HousingModelView(APIView):
 
         X_data = np.array([X_data], dtype=np.float)
 
-        #regression_model = load(settings.MEDIA_URL + 'regression.joblib')
-        #prediction =regression_model.predict(X_data)
+        regression_model = load(settings.MEDIA_URL + '/regression.joblib')
+        prediction =regression_model.predict(X_data)
 
-        #return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
-        return Response({'prediction':settings.MEDIA_URL + 'regression.joblib'}, status= status.HTTP_200_OK)
+        return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
+        #return Response({'prediction':settings.MEDIA_URL + 'regression.joblib'}, status= status.HTTP_200_OK)
 
