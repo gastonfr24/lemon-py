@@ -112,7 +112,7 @@ class HousingModelView(APIView):
 
         X_data = np.array([X_data], dtype=np.float)
 
-        regression_model = load('https://lempy.s3.amazonaws.com/media/https%3A/lempy.s3.amazonaws.com/media/regression.joblib')
+        regression_model = load('https://lempy.s3.amazonaws.com/media/regression.joblib')
         #regression_model = load(settings.MEDIA_URL + '/regression.joblib')
         prediction =regression_model.predict(X_data)
 
