@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -104,7 +103,7 @@ class HousingModelView(APIView):
             X_data.append(1)
         else:
             X_data.append(1)
-        print(data['State'])
+        #print(data['State'])
         X_data.append(data['house'])
         X_data.append(data['house_2'])
         X_data.append(data['Bathrooms'])
