@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -92,7 +93,7 @@ class SearchProjectView(APIView):
         serializer = SmallProjectSerializer(matches, many=True)
         return Response({'filtered_projects':serializer.data},status=status.HTTP_200_OK)
 
-
+@csrf_exempt
 class HousingModelView(APIView):
      def post( self, request, format=None):
         data= self.request.data
