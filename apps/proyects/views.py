@@ -94,7 +94,7 @@ class SearchProjectView(APIView):
 
 
 class HousingModelView(APIView):
-     def get( self, request, format=None):
+     def post( self, request, format=None):
         data= self.request.data
 
         X_data = []
