@@ -99,10 +99,10 @@ class HousingModelView(APIView):
 
         X_data = []
 
-        if data['State'] == 'Godoy Cruz':
+        if data['State'] == 'Mendoza[Ciudad]':
             X_data.append(1)
         else:
-            X_data.append(1)
+            X_data.append(0)
         #print(data['State'])
         X_data.append(data['house'])
         X_data.append(data['house_2'])
@@ -112,7 +112,7 @@ class HousingModelView(APIView):
 
         X_data = np.array([X_data], dtype=np.float)
 
-        #regression_model = load(settings.MEDIA_URL + 'regression.joblib')
+        regression_model = load(settings.MEDIA_URL + 'regression.joblib')
         #prediction =regression_model.predict(X_data)
 
         #return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
