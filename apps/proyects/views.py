@@ -97,20 +97,20 @@ class HousingModelView(APIView):
      def post( self, request, format=None):
         data= self.request.data
 
-        X_data = []
+        #X_data = []
 
-        if data['State'] == 'Mendoza[Ciudad]':
-            X_data.append(1)
-        else:
-            X_data.append(0)
+        #if data['State'] == 'Mendoza[Ciudad]':
+        #    X_data.append(1)
+        #else:
+        #    X_data.append(0)
         #print(data['State'])
-        X_data.append(data['house'])
-        X_data.append(data['house_2'])
-        X_data.append(data['Bathrooms'])
-        X_data.append(data['Bethrooms'])
+        #X_data.append(data['house'])
+        #X_data.append(data['house_2'])
+        #X_data.append(data['Bathrooms'])
+        #X_data.append(data['Bethrooms'])
 
 
-        X_data = np.array([X_data], dtype=np.float)
+        #X_data = np.array([X_data], dtype=np.float)
 
         #regression_model = load('https://lempy.s3.sa-east-1.amazonaws.com/media/regression.joblib')
         #regression_model = load(settings.MEDIA_URL + 'regression.joblib')
