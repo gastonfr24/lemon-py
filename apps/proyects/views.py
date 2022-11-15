@@ -104,10 +104,10 @@ class HousingModelView(APIView):
         else:
             X_data.append(0)
         #print(data['State'])
-        #X_data.append(data['house'])
-        #X_data.append(data['house_2'])
-        #X_data.append(data['Bathrooms'])
-        #X_data.append(data['Bethrooms'])
+        X_data.append(data['house'])
+        X_data.append(data['house_2'])
+        X_data.append(data['Bathrooms'])
+        X_data.append(data['Bethrooms'])
 
 
         #X_data = np.array([X_data], dtype=np.float)
