@@ -119,3 +119,4 @@ class HousingModelView(APIView):
         return Response({'prediction':2022}, status= status.HTTP_200_OK)
         #return Response({'prediction':settings.MEDIA_URL + 'regression.joblib'}, status= status.HTTP_200_OK)
 
+        
