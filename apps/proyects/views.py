@@ -110,7 +110,7 @@ class HousingModelView(APIView):
         X_data.append(data['Bethrooms'])
 
 
-        #X_data = np.array([X_data], dtype=np.float)
+        X_data = np.array([X_data], dtype=np.float)
 
         #regression_model = load('https://lempy.s3.sa-east-1.amazonaws.com/media/regression.joblib')
         #regression_model = load(settings.MEDIA_URL + 'regression.joblib')
