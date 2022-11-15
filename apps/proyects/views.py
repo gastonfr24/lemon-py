@@ -97,12 +97,12 @@ class HousingModelView(APIView):
      def post( self, request, format=None):
         data= self.request.data
 
-        #X_data = []
+        X_data = []
 
-        #if data['State'] == 'Mendoza[Ciudad]':
-        #    X_data.append(1)
-        #else:
-        #    X_data.append(0)
+        if data['State'] == 'Mendoza[Ciudad]':
+            X_data.append(1)
+        else:
+            X_data.append(0)
         #print(data['State'])
         #X_data.append(data['house'])
         #X_data.append(data['house_2'])
