@@ -19,7 +19,7 @@ import { Spinner } from "flowbite-react/lib/esm/components";
 import Table from "./Table";
 
 
-function LinkModel({linkmodel}) {
+function LinkModel({linkmodel, img}) {
 
 
 
@@ -35,6 +35,8 @@ function LinkModel({linkmodel}) {
                     <p className="dark:text-white md:text-lg dark:bg-zinc-900 font-gilroy-medium"> 
 Puedes probar el modelo <a href={`/${linkmodel}`} className="text-green-500">aquí</a>.
                     </p>
+
+                    <img class="object-cover h-48 max-w-screen mt-5" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Robot-clip-art-book-covers-feJCV3-clipart.png" alt="" />
 
             </div>
         </div>

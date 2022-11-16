@@ -27,9 +27,9 @@ function Projects({
           <p className='text-4xl font-bold inline border-b-4 text-zinc-800 dark:text-gray-300 border-[#4db5ff]'>
             Work
           </p>
-          <p className='py-6 dark:text-white text-zinc-800'>Aquí encontrarás varios pryectos de ML. Cada proyecto llevatanto  un análisis exploratorio
-           como también modelado con redes neuronales y diferentes algoritmos. El modelado en cada proyecto varía hay de regresión,
-          clasificación, clustering y predicción de series temporales</p>
+          <p className='py-6 dark:text-white text-zinc-800'> Aquí encontrarás varios proyectos que he realizado de Machine Learning y Deep Learning. Cada proyecto llevatanto un análisis exploratorio
+           como también modelado(regresión,
+          clasificación, clustering o series temporales)</p>
         </div>
 
 {/* container for projects */}

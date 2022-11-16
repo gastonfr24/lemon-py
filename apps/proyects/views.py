@@ -22,6 +22,9 @@ import pandas as pd
 import numpy as np
 from joblib import load
 import sklearn
+from io import BytesIO
+import boto3
+
 
 class ProjectListView(APIView):
     def get(self, request, format=None):
@@ -102,8 +105,8 @@ class HousingModelView(APIView):
         if data['State'] == 'Godoy Cruz':
             X_data.append(1)
         else:
-            X_data.append(1)
-        print(data['State'])
+            X_data.append(0)
+        #print(settings.MEDIA_URL)
         X_data.append(data['house'])
         X_data.append(data['house_2'])
         X_data.append(data['Bathrooms'])
@@ -112,8 +115,49 @@ class HousingModelView(APIView):
 
         X_data = np.array([X_data], dtype=np.float)
 
-        regression_model = load(settings.MEDIA_URL + 'regression.joblib')
-        prediction =regression_model.predict(X_data)
+        s3 = boto3.resource('s3')
+        bucket_str = settings.AWS_STORAGE_BUCKET_NAME
+        bucket_key ='media/'       
 
-        return Response({'prediction':prediction[0]/1000}, status= status.HTTP_200_OK)
+        try:
+            #my_bucket = s3.Bucket(bucket_str)
+            #for file in my_bucket.objects.filter(Prefix='media/'):
+            #    if file.key.endswith('.pkl'):
+            #        print(file.key)
+                
+
+            ## Scalers
+            with BytesIO() as X_scaler:
+                s3.Bucket(bucket_str).download_fileobj(bucket_key+'X_minmax.pkl', X_scaler)
+                X_scaler.seek(0)    # move back to the beginning after writing
+
+                X_scaler = load(X_scaler)
+
+                
+            with BytesIO() as y_scaler:
+                s3.Bucket(bucket_str).download_fileobj(bucket_key+'y_minmax.pkl', y_scaler)
+                y_scaler.seek(0)    # move back to the beginning after writing
+
+                y_scaler = load(y_scaler)
+
+            ## Model
+            with BytesIO() as data:
+                s3.Bucket(bucket_str).download_fileobj(bucket_key+'best_regression.joblib', data)
+                data.seek(0)    # move back to the beginning after writing
+
+                regression_model = load(data)
+
+
+                X_data = X_scaler.transform(X_data)
+                prediction = regression_model.predict(X_data)
+                #print('='*14)
+                prediction = y_scaler.inverse_transform(prediction)
+                #print(prediction[0][0])
+                #print(prediction)
+                return Response({'prediction': prediction[0][0]}, status= status.HTTP_200_OK)
+        except Exception as e:
+            #print(e)
+            return Response({'prediction':0}, status= status.HTTP_200_OK)
+
+             
 

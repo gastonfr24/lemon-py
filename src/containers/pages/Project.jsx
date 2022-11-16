@@ -133,7 +133,7 @@ function Project({get_project, project}) {
     >
   
       
-  <LinkModel linkmodel={project.model}/>
+  <LinkModel linkmodel={project.model} img={project.thumbnail}/>
     </Tabs.Item>:''
     }
 

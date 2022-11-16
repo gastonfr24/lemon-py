@@ -7,6 +7,8 @@ import { toast } from "react-toastify"
 
 import { Spinner } from 'flowbite-react'
 
+import {BsHouseDoor} from 'react-icons/bs'
+
 function Housing() {
 
 
@@ -91,7 +93,7 @@ function Housing() {
 
     <div class="w-full my-20 z-50 sticky  rounded-3xl px-6 daek:bg-zinc-900 bg-zinc-200 dark:bg-zinc-900">
         <div className="text-center">
-          <p className="mt-1 text-3xl font-gilroy-semibold text-gray-900 dark:text-zinc-200 sm:text-5xl sm:tracking-tight lg:text-4xl">
+          <p className="mt-1 pt-4 text-3xl font-gilroy-semibold text-gray-900 dark:text-zinc-200 sm:text-5xl sm:tracking-tight lg:text-4xl">
           Realice una Predicción
           </p>
         </div>
@@ -153,7 +155,7 @@ function Housing() {
             className="bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 dark:text-zinc-300 text-zinc-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
         </div>
         <div className='mb-6'>
-        <label  className="text-sm font-medium text-zinc-900 block mb-2 dark:text-zinc-300">Estado</label>
+        <label  className="text-sm font-medium text-zinc-900 block mb-2 dark:text-zinc-300">Ciudad</label>
                     <select
                         id="estado"
                         name="State"
@@ -188,7 +190,8 @@ function Housing() {
 
     </form>
 
-    <p className="mt-5">El modelo de predicción es de Regresión Lineal Múltiple y fue entrenado con 1200 datos </p>
+    <p className="mt-5">Ultima actualización 16/11/2022. 
+   *Tener en cuenta que el modelo fue entrenado con pocos datos* </p>
 </div>
 
         </div>
@@ -205,20 +208,10 @@ function Housing() {
             </div>
             <div id="content" class="py-12">
               <div id="icon" class="mt-5 mb-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
+            <BsHouseDoor
                   class="h-12 w-12 mx-auto fill-stroke text-green-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+              />
+
                 <p class="dark:text-gray-200 font-gilroy-bold text-4xl pt-2">
                   Su Casa
                 </p>
