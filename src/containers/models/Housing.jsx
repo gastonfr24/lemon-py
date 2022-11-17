@@ -191,7 +191,7 @@ function Housing() {
     </form>
 
     <p className="mt-5">Ultima actualización 16/11/2022. 
-   *Tener en cuenta que el modelo fue entrenado con pocos datos* </p>
+   *El precio de la casa está expresado en dólares(USD)* </p>
 </div>
 
         </div>

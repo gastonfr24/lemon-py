@@ -105,7 +105,7 @@ class HousingModelView(APIView):
         if data['State'] == 'Mendoza[Ciudad]':
             X_data.append(1)
         else:
-            X_data.append(1)
+            X_data.append(0)
         X_data.append(data['house'])
         X_data.append(data['house_2'])
         X_data.append(data['Bathrooms'])
