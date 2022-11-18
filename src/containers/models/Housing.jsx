@@ -119,7 +119,8 @@ function Housing() {
             name='house'
             value={house}
             onChange={e=>onChange(e)}
-
+            type='number'
+            min="100"
             className="bg-zinc-50 border dark:bg-zinc-900 border-zinc-300 dark:border-zinc-900 text-zinc-900 dark:text-zinc-300 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
         </div>
         <div className="mb-6">
@@ -128,7 +129,8 @@ function Housing() {
             name='house_2'
             value={house_2}
             onChange={e=>onChange(e)}
-
+            type='number'
+            min="100"
             className="bg-zinc-50 border dark:bg-zinc-900 border-zinc-300 dark:border-zinc-900 text-zinc-900 dark:text-zinc-300 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
         </div>
         <div className="mb-6">
