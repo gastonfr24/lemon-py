@@ -46,13 +46,15 @@ function ProjectsList({
                 to={`/blog/category/${item.category.id}`}
                   className={`
               ${
-                  item.category.name === "Machine Learning"
-                      ? " bg-green-200 text-green-700 hover:bg-green-300"
-                      : item.category.name === "Deep Learning"
-                      ? "bg-blue-200 text-blue-700 hover:bg-blue-800"
-                      : item.category.name === "Inteligencia Artificial"
-                      ? "bg-rose-100 text-rose-700"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  item.category.name === "Regresión"
+                      ? " bg-green-200 text-green-700 hover:bg-green-300 hover:text-green-800 duration-500"
+                      : item.category.name === "Series Temporales"
+                      ? "bg-blue-200 text-blue-700 hover:bg-blue-400 hover:text-blue-800 duration-500"
+                      : item.category.name === "Clustering"
+                      ? "bg-rose-100 text-rose-700 duration-500 hover:text-rose-800 hover:bg-rose-300"
+                      : item.category.name === "Clasificación Binaria"
+                      ? "bg-purple-300 text-purple-700 hover:bg-purple-400 duration-500"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200 duration-500"
               } 
               inline-flex items-center px-3 py-0.5 rounded-full text-sm font-gilroy-bold`}
               
