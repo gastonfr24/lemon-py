@@ -42,7 +42,7 @@ function Exploratorial({analisis, describe_df, slug, df}) {
 
         <div className="px-4 pb-2 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-8 lg:pt-2">
         <h2 className="font-gilroy-medium text-3xl font-bold tracking-tight text-green-500 sm:text-3xl sm:leading-none max-w-lg mb-6 ">
-                     Análisis Exploratorio básico del Dataset
+                     Análisis Descriptivo básico
                     </h2>
               <div className="flex flex-col items-center justify-between w-full ">
                     <p className="dark:text-white md:text-lg dark:bg-zinc-900 font-gilroy-medium"> 

@@ -23,7 +23,7 @@ const Search =({search_project, projects}) =>{
      <div name='work' className='w-full md:h-screen text-gray-300'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-6'>
-          <p className='text-4xl font-gilroy-semibold inline  text-gray-300 '>
+          <p className='text-4xl font-gilroy-semibold inline dark:text-gray-300 text-zinc-800'>
             <span className="border-b-4 border-[#4db5ff]">Resultados</span> de la búsqueda
           </p>
         </div>

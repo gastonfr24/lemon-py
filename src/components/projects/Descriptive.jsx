@@ -19,7 +19,7 @@ function Descriptive({content}) {
   return (
     <div className="px-4 pb-16 pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-20 lg:pt-2">
     <h2 className="font-sans text-3xl font-bold tracking-tight text-green-500 sm:text-4xl sm:leading-none max-w-lg mb-6">
-                 Análisis Descriptivo
+                 Análisis Exploratorio
                 </h2>
           <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
                 <p className="dark:text-white text-m md:text-m dark:bg-zinc-900 font-gilroy-medium"> 
