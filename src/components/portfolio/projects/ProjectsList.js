@@ -54,7 +54,7 @@ function ProjectsList({
                       ? "bg-rose-100 text-rose-700 duration-500 hover:text-rose-800 hover:bg-rose-300"
                       : item.category.name === "Clasificación Binaria"
                       ? "bg-purple-300 text-purple-700 hover:bg-purple-400 duration-500"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200 duration-500"
+                      : "bg-zinc-300 dark:bg-gray-100 text-gray-700 hover:bg-gray-200 duration-500"
               } 
               inline-flex items-center px-3 py-0.5 rounded-full text-sm font-gilroy-bold`}
               
